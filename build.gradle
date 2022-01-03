@@ -1,0 +1,24 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        jcenter()
+        // # https://stackoverflow.com/questions/65083313/could-not-find-com-android-tools-buildgradle4-1-1?rq=1
+        maven { url "https://maven.google.com" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.0'
+
+        //# https://stackoverflow.com/questions/38090248/could-not-resolve-all-dependencies-for-configuration-appdebugapkcopy
+        //compile 'com.android.support:appcompat-v7:23.1.1'
+        //compile 'com.android.support:recyclerview-v7:23.1.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+
+        // # https://stackoverflow.com/questions/65083313/could-not-find-com-android-tools-buildgradle4-1-1?rq=1
+        maven { url "https://maven.google.com" }
+    }
+}

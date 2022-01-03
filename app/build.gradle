@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    //compileSdkVersion 32
+    //buildToolsVersion "32.0.0"
+
+    //# https://stackoverflow.com/questions/64459937/could-not-create-task-appminifyreleasewithr8-cannot-query-the-value-of-this/65418056
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "dk.andsen.asqlitemanager"
+        minSdkVersion 8
+        targetSdkVersion 17
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_5
+            targetCompatibility JavaVersion.VERSION_1_5
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
